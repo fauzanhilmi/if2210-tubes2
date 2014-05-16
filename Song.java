@@ -26,6 +26,7 @@ public class Song {
     private int Year;
     private int Bitrate;
     private long Length;
+    //Belum implementasi rating
     
     public Song(String path) throws IOException, UnsupportedTagException, InvalidDataException
     {
@@ -48,7 +49,8 @@ public class Song {
         }
         catch (IOException | UnsupportedTagException | InvalidDataException e)
         {
-            System.out.println("Error in loading file tags!");
+            System.out.println("Error in loading '" + path +"'!");
+            System.out.println("Check again the path,file type or the file tag");
         }
         
     }
@@ -63,6 +65,15 @@ public class Song {
     public int getBitrate() {return Bitrate;}
     public long getLength() {return Length;}
     
+    public void setPath(String s) {Path = s;}
+    public void setTitle(String s) {Title = s;}
+    public void setArtist(String s) {Artist = s;}
+    public void setAlbum(String s) {Album = s;}
+    public void setGenre(String s) {Genre = s;} //?
+    public void setTrack(int x) {Track = x;}
+    public void setYear(int x) {Year = x;}
+    public void setBitrate(int x) {Bitrate = x;}
+    public void setLength(long x) {Length = x;}
     
 }
 
